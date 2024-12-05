@@ -1,0 +1,111 @@
+/* Register Form Container */
+.register-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure it takes full height of the screen */
+  background-color: #cad5e9;
+  padding: 2rem;
+  margin: 0; /* Ensure no margins causing offset */
+}
+
+.register-card {
+  background-color:whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Define the max width of the card */
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
+}
+
+/* Heading Styling */
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+/* Form Elements Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;  /* Increased gap between form elements */
+  margin: 0 auto;
+  width: 100%;  /* Ensure form takes up the full width of its container */
+  box-sizing: border-box;  /* Prevent form elements from overflowing */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  width: 100%;  /* Ensure inputs take full width of the form */
+  box-sizing: border-box;  /* Prevent inputs from overflowing */
+}
+
+/* Focus Styling for Inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Submit Button Styling */
+button {
+  color: #ffffff !important;
+  background-color: #2295e2 !important;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 100%;  /* Make button the full width of the form */
+  box-sizing: border-box;  /* Prevent button overflow */
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #2980b9;
+}
+
+/* Success and Error Messages */
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.success-message {
+  color: green;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Footer Styling */
+footer {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

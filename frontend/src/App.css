@@ -1,0 +1,160 @@
+/* Global Styles */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #ffffff; /* White */
+  --text-color: #333;
+  --background-color: #f4f4f9;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Root Container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+
+/* Logo Styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter, transform;
+  transition: filter 300ms, transform 300ms ease-in-out;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(0, 123, 255, 0.6));
+  transform: rotate(15deg) scale(1.1);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.7));
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Card Styles */
+.card {
+  padding: 2em;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for Fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Styles */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+/* Form Styles */
+form {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.4);
+}
+
+/* Error and Success Messages */
+p {
+  font-size: 1.2rem;
+  margin: 1em 0;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+/* Media Queries */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5em;
+  }
+
+  button {
+    padding: 0.8em 1.5em;
+  }
+}

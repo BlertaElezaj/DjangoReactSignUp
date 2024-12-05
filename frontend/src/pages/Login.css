@@ -1,0 +1,105 @@
+/* Basic Layout for Login Form */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #b0bfda;
+  padding: 2rem;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.login-form {
+  background-color:whitesmoke;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(53, 30, 30, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  outline: none;
+  border: 1px solid #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+  color: #ffffff !important;
+  background-color: #2295e2 !important;
+
+  padding: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold; /* Bold text for better readability */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover:enabled {
+  background-color: #1d7dbd; /* Slightly darker blue for hover state */
+  transform: scale(1.02); /* Subtle zoom effect */
+}
+
+button:disabled {
+  background-color: #b0cbe8; /* Lighter blue for disabled state */
+  color: #ffffff; /* Keep text color consistent */
+  cursor: not-allowed;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: green;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+  }
+
+  button {
+    padding: 0.8rem;
+    
+  }
+}
